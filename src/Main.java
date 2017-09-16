@@ -36,12 +36,19 @@ public class Main {
 //			Student x=sg.getStudent(1);
 //		System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName());
 		Student me=new Student(42,"bharath",df.parse("1997-01-31"),77.2);
-		sg.add(me,4);
+		sg.add(me,2);
 		s=sg.getStudents();
 		for(Student y:s) {
 			System.out.println(y.getId()+" "+y.getAvgMark()+" "+y.getFullName()+" "+y.getBirthDate());;
 		}
-		
+//		for(Student y:s) {
+//			System.out.println(y.getId()+" "+y.getAvgMark()+" "+y.getFullName()+" "+y.getBirthDate());;
+//		}
+		sg.removeFromIndex(1);
+		s=sg.getStudents();
+		for(Student y:s) {
+			System.out.println(y.getId()+" "+y.getAvgMark()+" "+y.getFullName()+" "+y.getBirthDate());;
+		}
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
