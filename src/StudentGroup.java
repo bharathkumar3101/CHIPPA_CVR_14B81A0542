@@ -109,9 +109,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
-		for(int i=index+1;i<=length;++i) {
+		for(int i=index+1;i<length;++i) {
 			this.remove(i);
-			System.out.println("In remfrm inde");
+			
 		}
 	}
 
