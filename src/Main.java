@@ -24,15 +24,23 @@ public class Main {
 			
 			sg.setStudents(ss);
 			
-			Student[] s=sg.getStudents();
-			for(Student x:s) {
-				System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName()+" "+x.getBirthDate());;
-			}
-			sg.remove(0);
-			s=sg.getStudents();
-			for(Student x:s) {
-				System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName()+" "+x.getBirthDate());;
-			}
+		Student[] s=sg.getStudents();
+//			for(Student x:s) {
+//				System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName()+" "+x.getBirthDate());;
+//			}
+//			sg.remove(0);
+//			s=sg.getStudents();
+//			for(Student x:s) {
+//				System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName()+" "+x.getBirthDate());;
+//			}
+//			Student x=sg.getStudent(1);
+//		System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName());
+		Student me=new Student(42,"bharath",df.parse("1997-01-31"),77.2);
+		sg.add(me,4);
+		s=sg.getStudents();
+		for(Student y:s) {
+			System.out.println(y.getId()+" "+y.getAvgMark()+" "+y.getFullName()+" "+y.getBirthDate());;
+		}
 		
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
