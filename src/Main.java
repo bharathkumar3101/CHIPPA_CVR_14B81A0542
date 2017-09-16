@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 public class Main {
 
-	public static void main(String[] args) throws ParseException 
+	public static void main(String[] args) throws NullPointerException 
 		{
 		try {
 			//You may test that your code works find here
@@ -23,7 +23,13 @@ public class Main {
 			
 			
 			sg.setStudents(ss);
+			
 			Student[] s=sg.getStudents();
+			for(Student x:s) {
+				System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName()+" "+x.getBirthDate());;
+			}
+			sg.remove(0);
+			s=sg.getStudents();
 			for(Student x:s) {
 				System.out.println(x.getId()+" "+x.getAvgMark()+" "+x.getFullName()+" "+x.getBirthDate());;
 			}

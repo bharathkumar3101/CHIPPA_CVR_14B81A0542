@@ -25,7 +25,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return students;
+		Student[] a=new Student[length];
+		for(int i=0;i<length;++i) {
+			a[i]=students[i];
+		}
+		return a;
 	}
 
 	@Override
@@ -52,6 +56,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		
 		for(int i=1;i<=length;++i) {
 			students[i]=students[i-1];
 		}
